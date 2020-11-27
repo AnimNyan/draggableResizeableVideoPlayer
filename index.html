@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Video Demo</title>
+    <!--Jquery ui css library needed for .resizeable and .draggable-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <!--Jquery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Jquery ui library needed for .resizeable() and .draggable()-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!--Jquery css library needed for .resizeable() and .draggable()-->
+    <script src="https://webtiming.github.io/timingsrc/lib/timingsrc-v2.js" text="javascript"></script>
+    <!--Mediasync library used to sync the media-->
+    <script text="javascript" src="https://mcorp.no/lib/mediasync.js"></script>
+    <!--Run the function in exp_mediasync.js in charge of the controls-->
+    <script type="text/javascript">
+    	  if (document.readyState === "complete") run();
+    	  else window.onload = function () {run();};
+    </script>
+  </head>
+  <body>
+    <p>
+      <b><span id="position">2.99</span></b>
+    </p>
+
+    <p id="buttons">
+      <button id="tostart">Reset</button>
+      <button id="pause">Pause</button>
+      <b><button id="forward">Play</button></b>
+      <button id="skipbackward">Skip 5 Back </button>
+      <button id="skipforward">Skip 5 Ahead</button>
+    </p>
+    <div class='video-container'>
+      <div class="gameVideo">
+        <video id="gameVideo" src="videos/Wallpaper Engine Rare Achievement.mp4" type="video/mp4" ></video>
+        <!-- Use this one instead to check for how well the audio syncs
+          <video id="faceCam" src="videos/Nightcore - Sweet Dreams.mp4" type="video/mp4"></video>
+        -->
+      </div>
+      <div class="faceCam">
+        <video id="faceCam" src="videos/Nightcore - Sweet Dreams.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+
+    <!--has function in charge of syncing the two videos-->
+    <script src = exp_mediasync.js type="text/javascript"></script>
+    <!--allows video to be draggable-->
+    <script src = script.js type="text/javascript"></script>
+  </body>
+</html>

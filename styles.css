@@ -1,0 +1,22 @@
+
+.faceCam {
+    border:5px solid orange;
+    height: 10vh;
+    position: absolute;
+    width: 10vw;
+}
+
+.gameVideo {
+    border:5px solid blue;
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+}
+
+.video-container {
+  position:relative;
+}
+
+video {
+  width:100%
+}
